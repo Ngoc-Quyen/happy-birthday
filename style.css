@@ -125,5 +125,50 @@ img {
     transform: translateX(-50%);
     left: 50%;
     position: absolute;
-    padding-top: 250px;
+    padding-top: 200px;
+    max-width: 100%;
+    /* Đảm bảo hình bánh kem không vượt quá kích thước của container */
+}
+
+.gallery-container {
+    position: relative;
+    z-index: 1;
+    /* Đảm bảo ảnh trong gallery-container nằm trên hình bánh kem */
+}
+
+.gallery {
+    overflow: hidden;
+}
+
+.gallery .profile {
+    float: left;
+    width: 25%;
+    /* Đảm bảo mỗi ảnh chiếm 25% của khối cha */
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+.profile {
+    flex: 1;
+    /* Ảnh và hình bánh kem trải dài ra để đảm bảo ngang hàng */
+    justify-content: center;
+    display: flex;
+    padding: 20px;
+    bottom: 20px;
+}
+
+img {
+    width: 80%;
+}
+
+.type-wrap-them {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.type-wrap-them.show {
+    opacity: 1;
 }
