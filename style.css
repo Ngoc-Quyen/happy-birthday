@@ -162,6 +162,7 @@ img {
 
 img {
     width: 80%;
+    border-radius: 10px;
 }
 
 .type-wrap-them {
